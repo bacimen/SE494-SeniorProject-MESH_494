@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{366DE2EC-D75A-5C69-6CD7-9540CE545277}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/ServerManager.cs">
+    <Files>
+      <File FileName="Assets/script/ServerManager.cs" Line="25" Column="84" />
+      <File FileName="Assets/script/CharacterController.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="multitest" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Photon" expanded="True">
+                <Node name="PhotonUnityNetworking" expanded="True">
+                  <Node name="Code" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="script" expanded="True">
+                <Node name="ServerManager.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="975edf2c-a1cd-4d74-ae6c-057c8ad8b6cb" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
