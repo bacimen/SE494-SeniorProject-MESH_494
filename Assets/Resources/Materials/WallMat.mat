@@ -10,7 +10,7 @@ Material:
   m_Name: WallMat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
-  m_LightmapFlags: 6
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d803da9aa0e54b348b5cefcaefb80dae, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3af621a993e8e024192ca6158b9006d6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1a79274759d0a3d48a7bbd3b6dc1d4dd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 153a1c6719a5958429a15da0fd7f5cbc, type: 3}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 5425af036df8a3e4e8ebafaf3905a5b0, type: 3}
+        m_Texture: {fileID: 2800000, guid: e661558c28017164c9ec92ca513dcd46, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: b75e7ef9eec574d47a7952f2536bda08, type: 3}
+        m_Texture: {fileID: 2800000, guid: fca60e2300afe324a9d58d7dd16ddf6a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
