@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Follower
+    - InstantiatePlayer
     - Launcher
     - Menu
     - MenuManager
@@ -11,6 +12,7 @@ ScriptsOnlyBuild:
     - RoomListItem
     - RoomManager
     PathCreator.dll:
+    - PathCreation.GlobalDisplaySettings
     - PathCreation.PathCreator
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
@@ -20,6 +22,7 @@ ScriptsOnlyBuild:
     Unity.ProBuilder.dll:
     - UnityEngine.ProBuilder.ProBuilderMesh
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
@@ -28,11 +31,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -84,12 +84,16 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2728}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 4104}
+      Script: {instanceID: 3978}
     - Class: 114
-      Script: {instanceID: 22410}
+      Script: {instanceID: 5326}
+    - Class: 114
+      Script: {instanceID: 20836}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -131,57 +135,59 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1532}
+      Script: {instanceID: 1528}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1750}
     - Class: 114
-      Script: {instanceID: 1980}
+      Script: {instanceID: 1854}
     - Class: 114
-      Script: {instanceID: 2124}
+      Script: {instanceID: 1998}
     - Class: 114
-      Script: {instanceID: 2196}
+      Script: {instanceID: 2070}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 2352}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2728}
     - Class: 114
-      Script: {instanceID: 2990}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3040}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 2970}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 3436}
+      Script: {instanceID: 3310}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 3538}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3432}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 3904}
+      Script: {instanceID: 3778}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 3804}
     - Class: 114
-      Script: {instanceID: 3956}
+      Script: {instanceID: 3830}
     - Class: 114
-      Script: {instanceID: 4616}
+      Script: {instanceID: 4490}
     - Class: 114
-      Script: {instanceID: 4720}
+      Script: {instanceID: 4594}
     - Class: 114
-      Script: {instanceID: 4836}
+      Script: {instanceID: 4710}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5188}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 5360}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5600}
+      Script: {instanceID: 5326}
+    - Class: 114
+      Script: {instanceID: 5480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -951,6 +957,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PunTurnManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InstantiatePlayer
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744

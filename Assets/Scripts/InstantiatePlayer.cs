@@ -1,62 +1,105 @@
+using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
+using Debug = UnityEngine.Debug;
 
-public class PlayerPos{
+public class PlayerPos
+{
     private Vector3 _position;
     private bool _isAvailable;
-
-    public PlayerPos(Vector3 position, bool isAvailable){
+     
+    public PlayerPos(Vector3 position, bool isAvailable)
+    {
         _position = position;
         _isAvailable = isAvailable;
     }
 
-    public Vector3 GetPos(){
+    public Vector3 GetPos()
+    {
         return _position;
     }
 
-    public bool GetAvailability(){
+    public bool GetAvailability()
+    {
         return _isAvailable;
     }
 
-    public void SetAvailability(bool set){
+    public void SetAvailability(bool set)
+    {
         _isAvailable = set;
     }
 }
 
+// The following script must be placed in all scenes attached to a GameObject named as "InstantiatePlayer" in order to work...
 public class InstantiatePlayer : MonoBehaviour
 {
-    // Singleton
-    public static InstantiatePlayer instance;
-    private List<PlayerPos> _playerPosList;
+    #region Singleton
+    private static InstantiatePlayer _instance;
+    public static InstantiatePlayer Instance
+    {
+        get
+        {
+            if (InstantiatePlayer._instance == null)
+            {
+                InstantiatePlayer._instance = GameObject.Find("InstantiatePlayer").GetComponent<InstantiatePlayer>();
+                InstantiatePlayer._instance.Init();
+                DontDestroyOnLoad(InstantiatePlayer._instance.gameObject);
+            }
+            return InstantiatePlayer._instance;
+        }
+    }
+    #endregion
+
+    private PlayerPos[] _playerPosList;
     private int _playerCt;
 
-    public InstantiatePlayer(int playerCt = 10){
+    public void Init(int playerCt = 10)
+    {
         _playerCt = playerCt;
-        _playerPosList = new List<PlayerPos>(new PlayerPos[_playerCt]){ 
-            new PlayerPos(new Vector3(-8.309975f, -16.38184f, 0.05430984f), true),
-            new PlayerPos(new Vector3(-8.309975f, -16.38184f, -2.19569f), true),
-            new PlayerPos(new Vector3(-8.309975f, -16.38184f, -4.94569f), true),
-            new PlayerPos(new Vector3(-8.309975f, -16.38184f, -7.44569f), true),
-            new PlayerPos(new Vector3(-8.309975f, -16.38184f, -9.94569f), true),
-            new PlayerPos(new Vector3(-8.309975f, -16.38184f, -12.44569f), true),
-            new PlayerPos(new Vector3(-11.55997f, -16.38184f, -8.44569f), true),
-            new PlayerPos(new Vector3(-11.55997f, -16.38184f, -6.19569f), true),
-            new PlayerPos(new Vector3(-11.55997f, -16.38184f, -3.44569f), true),
-        };
+        _playerPosList = new PlayerPos[]{
+             new PlayerPos(new Vector3(-15.71047f, 2.109212f, -6.394266f), true),
+             new PlayerPos(new Vector3(-15.71047f, 2.109212f, -3.894266f), true),
+             new PlayerPos(new Vector3(-15.71047f, 2.109212f, -1.394266f), true),
+             new PlayerPos(new Vector3(-15.71047f, 2.109212f, 1.105734f), true),
+             new PlayerPos(new Vector3(-15.71047f, 2.109212f, 3.605734f), true),
+             new PlayerPos(new Vector3(-15.71047f, 2.109212f, 6.105734f), true),
+             new PlayerPos(new Vector3(-18.96047f, 2.109212f, 2.355734f), true),
+             new PlayerPos(new Vector3(-18.96047f, 2.109212f, -0.1442661f), true),
+             new PlayerPos(new Vector3(-18.96047f, 2.109212f, -2.644266f), true),
+         };
     }
 
-    public Vector3 GetPosition(){
-        int random = Random.Range(0, _playerCt);
-        _playerPosList[random].SetAvailability(false);
-        return _playerPosList[random].GetPos();
+    public Vector3 GetPosition()
+    {
+        for (int i = 0; i < _playerCt; i++)
+        {
+            if (_playerPosList[i].GetAvailability())
+            {
+                _playerPosList[i].SetAvailability(false);
+                return _playerPosList[i].GetPos();
+            }
+        }
+        Debug.LogError("There are no spaces left!");
+        throw new InvalidOperationException();
     }
 
-    // Singleton
-    private void Awake() {
-        if(instance != null)
-            Destroy(gameObject);
+    private void Awake()
+    {
+        #region Singleton
+        if (InstantiatePlayer._instance == null)
+        {
+            InstantiatePlayer._instance = GameObject.Find("InstantiatePlayer").GetComponent<InstantiatePlayer>();
+            InstantiatePlayer._instance.Init();
+            DontDestroyOnLoad(InstantiatePlayer._instance.gameObject);
+        }
         else
-            instance = this;
+        {
+            Destroy(gameObject);
+        }
+        #endregion
     }
 }
