@@ -9,6 +9,9 @@ public class Follower : MonoBehaviour
     public float speed = 5.0f;
     float distanceTravelled;
 
+    private void Awake() {
+    }
+
     private void Update()
     {
         distanceTravelled += speed * Time.deltaTime;
