@@ -1,4 +1,3 @@
-using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,7 +34,7 @@ public class PlayerPos
 }
 
 // The following script must be placed in all scenes attached to a GameObject named as "InstantiatePlayer" in order to work...
-public class InstantiatePlayer : MonoBehaviourPun
+public class InstantiatePlayer : MonoBehaviour
 {
     #region Singleton
     private static InstantiatePlayer _instance;

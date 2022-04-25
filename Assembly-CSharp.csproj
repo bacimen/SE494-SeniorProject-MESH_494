@@ -36,31 +36,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathSpawner.cs" />
-     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
-     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathPlacer.cs" />
-     <Compile Include="Assets\Scripts\PlayerListItem.cs" />
-     <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\RoomListItem.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\InstantitateModel.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Follower.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
-     <Compile Include="Assets\Scripts\Launcher.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathFollower.cs" />
-     <Compile Include="Assets\Scripts\RoomManager.cs" />
      <Compile Include="Assets\Scripts\InstantiatePlayer.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
-     <Compile Include="Assets\Scripts\InstantitateModel.cs" />
      <None Include="Assets\ExternalAssets\SpaceZeta_Spotlight\Info.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -70,18 +60,14 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
@@ -305,12 +291,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-        <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-        <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -704,41 +684,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{1693ca33-86d6-8e63-f68f-35ef6311a088}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{38fe6a79-e81b-83f3-7ad5-f3bb0d6e1eab}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
     <ProjectReference Include="PathCreatorEditor.csproj">
       <Project>{364acbc0-d3fd-5c31-be94-7bbf59366bee}</Project>
       <Name>PathCreatorEditor</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{4cb4baca-f808-5214-4d3a-4449afa64c5d}</Project>
-      <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{9ab93011-3167-3fa1-d21b-63ac301ab917}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{004880e5-bcf5-9c42-2cdc-14870ad7be53}</Project>
-      <Name>PhotonRealtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{99cde27a-7dfa-46e6-11db-d56319816d35}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
-    </ProjectReference>
     <ProjectReference Include="PathCreator.csproj">
       <Project>{dca98a1f-fe15-afdd-1e32-5e4376566222}</Project>
       <Name>PathCreator</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{588207c4-10ee-bfde-3dda-653c4e6f0866}</Project>
-      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
