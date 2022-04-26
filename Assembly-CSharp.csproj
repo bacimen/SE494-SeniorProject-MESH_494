@@ -42,7 +42,7 @@
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathPlacer.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
-     <Compile Include="Assets\Scripts\InstantitateModel.cs" />
+     <Compile Include="Assets\Scripts\InstantiateModel.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Follower.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\PathFollower.cs" />
@@ -673,14 +673,14 @@
     <Reference Include="UnityEditor.UI">
         <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+        <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
