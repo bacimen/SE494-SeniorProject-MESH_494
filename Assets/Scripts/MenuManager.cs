@@ -1,47 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-	public static MenuManager Instance;
+    public static MenuManager instance;
+    public GameObject startMenu;
+    public InputField usernameField;
+    private Button joinServerButton;
+    private GameObject canvas;
 
-	[SerializeField] Menu[] menus;
+    private void Awake()
+    {
+        #region Singleton
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != null)
+        {
+            Destroy(this);
+        }
+        #endregion
 
-	void Awake()
-	{
-		Instance = this;
-	}
+        joinServerButton = GameObject.Find("JoinServerButton").GetComponent<Button>();
+        canvas = gameObject;
+    }
 
-	public void OpenMenu(string menuName)
-	{
-		for (int i = 0; i < menus.Length; i++)
-		{
-			if (menus[i].menuName == menuName)
-			{
-				menus[i].Open();
-			}
-			else if (menus[i].open)
-			{
-				CloseMenu(menus[i]);
-			}
-		}
-	}
+    private void Start()
+    {
+        joinServerButton.onClick.AddListener(() => { 
+            this.ConnectToServer();
+            canvas.SetActive(false);
+        });
+    }
 
-	public void OpenMenu(Menu menu)
-	{
-		for (int i = 0; i < menus.Length; i++)
-		{
-			if (menus[i].open)
-			{
-				CloseMenu(menus[i]);
-			}
-		}
-		menu.Open();
-	}
-
-	public void CloseMenu(Menu menu)
-	{
-		menu.Close();
-	}
+    public void ConnectToServer()
+    {
+        Client.instance.ConnectToServer();
+    }
 }

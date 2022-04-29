@@ -31,7 +31,6 @@ public class InstantiateModel : MonoBehaviour
         if(other.tag == "Model"){
             Destroy(currentModel);
             if(currentIndex == index - 1){
-                Debug.Log("aaaa");
                 currentIndex = 0;
             }
             else
