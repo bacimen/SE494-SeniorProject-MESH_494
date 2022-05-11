@@ -120,15 +120,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5168}
     - Class: 114
-      Script: {instanceID: 18380}
+      Script: {instanceID: 21656}
     - Class: 114
-      Script: {instanceID: 18384}
+      Script: {instanceID: 21658}
     - Class: 114
-      Script: {instanceID: 18406}
+      Script: {instanceID: 29798}
     - Class: 114
-      Script: {instanceID: 18448}
+      Script: {instanceID: 29802}
     - Class: 114
-      Script: {instanceID: 18462}
+      Script: {instanceID: 29824}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -737,4 +737,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/FashionShowScene.unity
-  playerPath: C:/Users/bugra/Desktop/testbuild/multitest.exe
+  playerPath: C:/Users/bugra/Desktop/build/multitest.exe
