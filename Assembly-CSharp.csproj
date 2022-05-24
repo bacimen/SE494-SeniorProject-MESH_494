@@ -55,21 +55,29 @@
      <Compile Include="Assets\Scripts\ServerScripts\Client.cs" />
      <Compile Include="Assets\Scripts\InstantiatePlayer.cs" />
      <Compile Include="Assets\ExternalAssets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
+     <Compile Include="Assets\Scripts\UIScripts\AvatarScene.cs" />
+     <Compile Include="Assets\UI pack\Scripts\FillValueNumber.cs" />
+     <Compile Include="Assets\Scripts\UIScripts\SplashScene.cs" />
      <None Include="Assets\ExternalAssets\SpaceZeta_Spotlight\Info.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\UMA\InternalDataStore\InGame\Resources\Shader\NormalShader.compute" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\UMA\InternalDataStore\InGame\Resources\PlaceholderAssets\PlaceholderAssetsREADME.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\UMA\InternalDataStore\AssetVersion.xml" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\UMA\Whats New in UMA.txt" />
+     <None Include="Assets\UI pack\Documentation.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -689,6 +697,9 @@
     <Reference Include="UnityEngine.UI">
         <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>C:\Users\bugra\Desktop\SE494-SeniorProject-MESH_494\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PathCreatorEditor.csproj">
@@ -698,6 +709,30 @@
     <ProjectReference Include="PathCreator.csproj">
       <Project>{dca98a1f-fe15-afdd-1e32-5e4376566222}</Project>
       <Name>PathCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="Addressable_Editor.csproj">
+      <Project>{909949b3-6771-4f09-155b-42f439e06612}</Project>
+      <Name>Addressable_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Examples_Editor.csproj">
+      <Project>{9de901e0-e888-a52f-388d-db4b0bfac484}</Project>
+      <Name>UMA_Examples_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Examples.csproj">
+      <Project>{e3e0da81-8191-3134-06f1-953a04acabe4}</Project>
+      <Name>UMA_Examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Content.csproj">
+      <Project>{1bf0baf4-30f4-c0a7-c12b-47f7d95a2967}</Project>
+      <Name>UMA_Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Core.csproj">
+      <Project>{dcccf018-be41-7416-481c-096a0771b4c5}</Project>
+      <Name>UMA_Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Core_Editor.csproj">
+      <Project>{c573d877-4417-531f-5984-b46b5c95e564}</Project>
+      <Name>UMA_Core_Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
